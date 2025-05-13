@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground, Platform } from 'react-native';
 import { Link } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '@/hooks/useTheme';
@@ -15,6 +15,8 @@ export default function WelcomeScreen() {
       <LinearGradient
         colors={['rgba(0,0,0,0.1)', 'rgba(0,0,0,0.8)']}
         style={styles.overlay}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 0, y: 1 }}
       >
         <SafeAreaView style={styles.container}>
           <View style={styles.header}>
